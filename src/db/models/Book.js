@@ -1,6 +1,6 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../sequelize.js";
-import { title, author, year } from "../../constants/validation.js";
+import { title, author } from "../../constants/validation.js";
 
 const Book = sequelize.define("book", {
   title: {
