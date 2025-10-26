@@ -10,5 +10,5 @@ export const author = {
 
 export const year = {
   value: /^(1[4-9][5-9]\d|20\d{2}|21[0-4]\d|2050)$/,
-  message: "Year must be a 4-digit number between 1450 and 2050",
+  message: `Year must be a 4-digit number between 1450 and 2050`,
 };

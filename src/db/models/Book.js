@@ -1,6 +1,6 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../sequelize.js";
-import { title, author } from "../../constants/validation.js";
+import { title, author, year } from "../../constants/validation.js";
 
 const Book = sequelize.define("book", {
   title: {
@@ -24,8 +24,8 @@ const Book = sequelize.define("book", {
     allowNull: false,
     validate: {
       isInt: { msg: "Year must be an integer" },
-      min: { args: [1450], msg: "Year must be after 1450" },
-      max: { args: [2050], msg: "Year must be before 2050" },
+      min: { args: [1450], msg: year.msg },
+      max: { args: [2050], msg: year.msg },
     },
   },
 });

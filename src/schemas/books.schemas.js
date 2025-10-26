@@ -1,8 +1,6 @@
 import * as z from "zod";
 import { title, author } from "./../constants/validation.js";
 
-const currentYear = new Date().getFullYear();
-
 export const bookFullSchema = z.object({
   title: z
     .string()
@@ -20,5 +18,5 @@ export const bookFullSchema = z.object({
     .number()
     .int("Year must be an integer")
     .min(1450, "Year must be after 1450")
-    .max(currentYear + 5, `Year must not be after ${currentYear + 5}`),
+    .max(2050, `Year must not be after 2050`),
 });
