@@ -1,5 +1,5 @@
 import * as z from "zod";
-import { title, author, year } from "./../constants/validation.js";
+import { title, author } from "./../constants/validation.js";
 
 const currentYear = new Date().getFullYear();
 
